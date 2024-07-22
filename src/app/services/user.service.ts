@@ -15,4 +15,8 @@ export class UserService {
     return this._http.get<IUser[]>(`${API_CONFIG.baseUrl}/api/users`)
   }
 
+  create(user: IUser): Observable<IUser[]>{
+    return this._http.post<IUser[]>(`${API_CONFIG.baseUrl}/api/users`, user)
+  }
+
 }

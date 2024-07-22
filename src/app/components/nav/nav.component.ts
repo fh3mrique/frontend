@@ -11,7 +11,7 @@ export class NavComponent implements OnInit {
   constructor(private readonly _router: Router){}
 
   ngOnInit(): void {
-    this._router.navigate(['users'])
+    this._router.navigate(['users/create'])
   }
 
 }

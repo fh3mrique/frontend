@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
-import { IUser } from '../../types/user/IUser';
+import { UserService } from '../../../services/user.service';
+import { IUser } from '../../../types/user/IUser';
 
 const ELEMENT_DATA: IUser[] = [];
 
