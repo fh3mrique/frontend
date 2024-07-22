@@ -6,18 +6,18 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from "../app-routing.module";
 import { HeaderComponent } from './header/header.component';
-import { UsersListComponent } from './users-list/users-list.component';
 import { LoginComponent } from './login/login.component';
-import { UsersCreateComponent } from './user/users-create/users-create.component';
+import { UsersCreateComponent } from './users-create/users-create.component';
+import { UsersListComponent } from "./users-list/users-list.component";
 @NgModule(
     {
         declarations: [
             NavComponent,
             HomeComponent,
             HeaderComponent,
-            UsersListComponent,
             LoginComponent,
-            UsersCreateComponent
+            UsersCreateComponent,
+            UsersListComponent
         ],
         imports: [
             FormsModule,

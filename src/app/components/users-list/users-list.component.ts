@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IUser } from '../../types/user/IUser';
 import { UserService } from '../../services/user.service';
-
-
+import { IUser } from '../../types/user/IUser';
 
 const ELEMENT_DATA: IUser[] = [];
 
@@ -26,5 +24,4 @@ export class UsersListComponent implements OnInit{
       this.dataSource = response
     })
   }
-
 }
