@@ -27,6 +27,10 @@ export class UserService {
     return this._http.put<IUser>(`${API_CONFIG.baseUrl}/api/users/${user.id}`, user)
   }
 
+  deleteUser(userId: number): Observable<void> {
+    return this._http.delete<void>(`${API_CONFIG.baseUrl}/api/users/${userId}`);
+  }
+
   deleteBoardingPass(userId: number, boardingPassId: number): Observable<void> {
     const url = `${API_CONFIG.baseUrl}/api/users/${userId}/boarding-passes/${boardingPassId}`;
     return this._http.delete<void>(url);
