@@ -10,7 +10,7 @@ const ELEMENT_DATA: IUser[] = [];
   styleUrl: './users-list.component.css'
 })
 export class UsersListComponent implements OnInit{
-  displayedColumns: string[] = ['id', 'name', 'email', 'symbol'];
+  displayedColumns: string[] = ['id', 'name', 'email', 'actions'];
   dataSource = ELEMENT_DATA;
 
   constructor(private readonly _userService: UserService){}
