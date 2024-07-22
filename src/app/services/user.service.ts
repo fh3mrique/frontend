@@ -11,12 +11,20 @@ export class UserService {
 
   constructor(private readonly _http: HttpClient) { }
 
+  findById (id: number): Observable<IUser> {
+    return this._http.get<IUser>(`${API_CONFIG.baseUrl}/api/users/${id}`);
+  }
+
   findAll(): Observable<IUser[]>{
     return this._http.get<IUser[]>(`${API_CONFIG.baseUrl}/api/users`)
   }
 
   create(user: IUser): Observable<IUser[]>{
     return this._http.post<IUser[]>(`${API_CONFIG.baseUrl}/api/users`, user)
+  }
+
+  update(user: IUser): Observable<IUser>{
+    return this._http.put<IUser>(`${API_CONFIG.baseUrl}/api/users/${user.id}`, user)
   }
 
 }

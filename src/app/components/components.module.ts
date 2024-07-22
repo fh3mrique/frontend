@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { UsersCreateComponent } from './user/users-create/users-create.component';
 import { UsersListComponent } from "./user/users-list/users-list.component";
+import { UserUpdateComponent } from './user/user-update/user-update.component';
 @NgModule(
     {
         declarations: [
@@ -17,7 +18,8 @@ import { UsersListComponent } from "./user/users-list/users-list.component";
             HeaderComponent,
             LoginComponent,
             UsersCreateComponent,
-            UsersListComponent
+            UsersListComponent,
+            UserUpdateComponent
         ],
         imports: [
             FormsModule,
