@@ -10,7 +10,6 @@ import { LoginComponent } from './login/login.component';
 import { UsersCreateComponent } from './user/users-create/users-create.component';
 import { UsersListComponent } from "./user/users-list/users-list.component";
 import { UserUpdateComponent } from './user/user-update/user-update.component';
-import { UsersDeleteComponent } from './user/users-delete/users-delete.component';
 @NgModule(
     {
         declarations: [
@@ -21,7 +20,6 @@ import { UsersDeleteComponent } from './user/users-delete/users-delete.component
             UsersCreateComponent,
             UsersListComponent,
             UserUpdateComponent,
-            UsersDeleteComponent
         ],
         imports: [
             FormsModule,

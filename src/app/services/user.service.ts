@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { API_CONFIG } from '../utils/requestConfig';
 import { Observable } from 'rxjs';
 import { IUser } from '../types/user/IUser';
+import { IBoardingPasses } from '../types/user/boarding-pass.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -42,6 +43,10 @@ export class UserService {
 
   deactivateBoardingPass(userId: number, boardingPassId: number): Observable<void> {
     return this._http.delete<void>(`${API_CONFIG.baseUrl}/api/users/${userId}/${boardingPassId}/deactivate`, {});
+  }
+
+  addBoardingPass(userId: number, boardingPass: IBoardingPasses): Observable<void> {
+    return this._http.post<void>(`${API_CONFIG.baseUrl}/api/users/${userId}/boarding-passes`, boardingPass);
   }
 
 }
